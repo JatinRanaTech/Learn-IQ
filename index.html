@@ -13,8 +13,8 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <style>
       /* ============================================================
-       ROOT & VARIABLES — Warm & Human-Friendly Palette
-       ============================================================ */
+           ROOT & VARIABLES — Warm & Human-Friendly Palette
+           ============================================================ */
       :root {
         --bg-warm: #fffdf7;
         --bg-cream: #fff8f0;
@@ -34,6 +34,16 @@
         --accent-red-light: #ffeeed;
         --accent-blue: #4d96ff;
         --accent-blue-light: #edf4ff;
+        --accent-teal: #00cec9;
+        --accent-teal-light: #e6fafa;
+        --accent-indigo: #5b5fcf;
+        --accent-indigo-light: #f0f0ff;
+        --accent-orange: #ff8c42;
+        --accent-orange-light: #fff4ec;
+        --accent-pink: #fd79a8;
+        --accent-pink-light: #fff0f6;
+        --accent-lime: #a8d948;
+        --accent-lime-light: #f7fbe8;
         --text-main: #2d3436;
         --text-muted: #636e72;
         --text-soft: #8b9598;
@@ -172,7 +182,7 @@
       .section-sub {
         font-size: 1.1rem;
         color: var(--text-muted);
-        max-width: 560px;
+        max-width: 620px;
         margin: 0 auto 50px;
         font-weight: 500;
         line-height: 1.6;
@@ -1492,9 +1502,6 @@
         font-weight: 600;
       }
 
-      /* ============================================================
-       APP SHOWCASE (modified for images)
-       ============================================================ */
       #showcase {
         background: #fff8f0;
         overflow: hidden;
@@ -1755,6 +1762,363 @@
         line-height: 1.55;
       }
 
+      /* ============================================================
+           PREMIUM SERVICES SECTION
+           ============================================================ */
+      #services {
+        background: linear-gradient(
+          180deg,
+          #fffdf7 0%,
+          #fff8f0 40%,
+          #fffdf7 100%
+        );
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      #services::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            ellipse at 30% 20%,
+            rgba(124, 92, 252, 0.04) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 70% 60%,
+            rgba(255, 107, 107, 0.04) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse at 50% 80%,
+            rgba(0, 184, 148, 0.03) 0%,
+            transparent 60%
+          );
+      }
+      #services .section-label {
+        color: var(--accent-purple);
+      }
+      #services .section-label::before,
+      #services .section-label::after {
+        background: var(--accent-purple);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .service-card {
+        position: relative;
+        padding: 32px 28px 28px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-shadow:
+          0 4px 24px rgba(0, 0, 0, 0.04),
+          0 1px 4px rgba(0, 0, 0, 0.03);
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        border-radius: 4px 4px 0 0;
+        opacity: 0.85;
+        transition:
+          height 0.3s ease,
+          opacity 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.1),
+          0 8px 20px rgba(0, 0, 0, 0.06);
+        border-color: rgba(200, 200, 210, 0.5);
+      }
+      .service-card:hover::before {
+        height: 6px;
+        opacity: 1;
+      }
+      .sc-1::before {
+        background: linear-gradient(
+          90deg,
+          var(--accent-coral),
+          var(--accent-rose)
+        );
+      }
+      .sc-2::before {
+        background: linear-gradient(90deg, var(--accent-purple), #a78bfa);
+      }
+      .sc-3::before {
+        background: linear-gradient(90deg, var(--accent-blue), #74b9ff);
+      }
+      .sc-4::before {
+        background: linear-gradient(90deg, var(--accent-mint), #55efc4);
+      }
+      .sc-5::before {
+        background: linear-gradient(90deg, var(--accent-amber), #ff9f43);
+      }
+      .sc-6::before {
+        background: linear-gradient(
+          90deg,
+          var(--accent-red),
+          var(--accent-rose)
+        );
+      }
+      .sc-7::before {
+        background: linear-gradient(90deg, var(--accent-teal), #6cdfd8);
+      }
+      .sc-8::before {
+        background: linear-gradient(90deg, var(--accent-indigo), #8b8fd9);
+      }
+      .sc-9::before {
+        background: linear-gradient(90deg, var(--accent-pink), #fdafc7);
+      }
+      .sc-10::before {
+        background: linear-gradient(90deg, var(--accent-orange), #ffb380);
+      }
+      .sc-11::before {
+        background: linear-gradient(90deg, var(--accent-lime), #c3e875);
+      }
+
+      .service-icon-wrap {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        transition: transform 0.35s ease;
+        position: relative;
+        z-index: 1;
+      }
+      .service-card:hover .service-icon-wrap {
+        transform: scale(1.12);
+      }
+      .sc-1 .service-icon-wrap {
+        background: var(--accent-coral-light);
+        color: var(--accent-coral);
+      }
+      .sc-2 .service-icon-wrap {
+        background: var(--accent-purple-light);
+        color: var(--accent-purple);
+      }
+      .sc-3 .service-icon-wrap {
+        background: var(--accent-blue-light);
+        color: var(--accent-blue);
+      }
+      .sc-4 .service-icon-wrap {
+        background: var(--accent-mint-light);
+        color: var(--accent-mint);
+      }
+      .sc-5 .service-icon-wrap {
+        background: var(--accent-amber-light);
+        color: #c78500;
+      }
+      .sc-6 .service-icon-wrap {
+        background: var(--accent-red-light);
+        color: var(--accent-red);
+      }
+      .sc-7 .service-icon-wrap {
+        background: var(--accent-teal-light);
+        color: #00a3a0;
+      }
+      .sc-8 .service-icon-wrap {
+        background: var(--accent-indigo-light);
+        color: var(--accent-indigo);
+      }
+      .sc-9 .service-icon-wrap {
+        background: var(--accent-pink-light);
+        color: #d4578c;
+      }
+      .sc-10 .service-icon-wrap {
+        background: var(--accent-orange-light);
+        color: #e07a30;
+      }
+      .sc-11 .service-icon-wrap {
+        background: var(--accent-lime-light);
+        color: #7a9e2e;
+      }
+
+      .service-icon-wrap svg {
+        width: 26px;
+        height: 26px;
+        stroke-width: 2;
+      }
+
+      .service-badge {
+        display: inline-block;
+        padding: 4px 11px;
+        border-radius: 14px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+      }
+      .sc-1 .service-badge {
+        background: var(--accent-coral-light);
+        color: var(--accent-coral);
+      }
+      .sc-6 .service-badge {
+        background: var(--accent-red-light);
+        color: var(--accent-red);
+      }
+      .sc-9 .service-badge {
+        background: var(--accent-pink-light);
+        color: #d4578c;
+      }
+
+      .service-title {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 6px;
+        position: relative;
+        z-index: 1;
+        letter-spacing: -0.02em;
+      }
+      .service-desc {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        margin-bottom: 16px;
+        line-height: 1.5;
+        position: relative;
+        z-index: 1;
+        flex-shrink: 0;
+      }
+      .service-features {
+        list-style: none;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        flex: 1;
+      }
+      .service-features li {
+        font-size: 0.84rem;
+        color: var(--text-muted);
+        padding: 5px 0 5px 22px;
+        position: relative;
+        line-height: 1.45;
+        font-weight: 500;
+      }
+      .service-features li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 11px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 0.45;
+      }
+      .service-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--font-body);
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--accent-purple);
+        text-decoration: none;
+        padding: 8px 0;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        border: none;
+        background: none;
+        cursor: pointer;
+        letter-spacing: 0.3px;
+        align-self: flex-start;
+      }
+      .service-cta:hover {
+        gap: 12px;
+        color: var(--accent-coral);
+      }
+      .service-cta svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease;
+      }
+      .service-cta:hover svg {
+        transform: translateX(4px);
+      }
+
+      .services-cta-block {
+        margin-top: 70px;
+        padding: 56px 40px;
+        border-radius: 28px;
+        background: linear-gradient(
+          135deg,
+          rgba(124, 92, 252, 0.06) 0%,
+          rgba(255, 107, 107, 0.06) 100%
+        );
+        border: 1px solid rgba(124, 92, 252, 0.12);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+      }
+      .services-cta-block::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(124, 92, 252, 0.06) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .services-cta-block h3 {
+        font-family: var(--font-display);
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 14px;
+        position: relative;
+        z-index: 1;
+        letter-spacing: -0.02em;
+      }
+      .services-cta-block p {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        max-width: 640px;
+        margin: 0 auto 32px;
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+      }
+      .services-cta-btns {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+      }
+
       #leaderboard {
         background: #fffdf7;
       }
@@ -1933,6 +2297,126 @@
         color: var(--accent-amber);
         font-size: 13px;
         margin-top: 2px;
+      }
+
+      /* ============================================================
+           CONTACT SECTION
+           ============================================================ */
+      #contact {
+        background: linear-gradient(
+          180deg,
+          #fffdf7 0%,
+          #fff8f0 40%,
+          #fffdf7 100%
+        );
+        padding: 100px 0;
+        position: relative;
+      }
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        border-radius: 32px;
+        padding: 60px 50px;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+        position: relative;
+        overflow: hidden;
+      }
+      .contact-info h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: var(--text-main);
+      }
+      .contact-info p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .contact-detail {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+      }
+      .contact-detail .icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--accent-coral-light);
+        color: var(--accent-coral);
+        flex-shrink: 0;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .form-group {
+        position: relative;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        margin-bottom: 6px;
+        letter-spacing: 0.3px;
+      }
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 16px;
+        border: 2px solid var(--border-soft);
+        background: #fff;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        color: var(--text-main);
+        transition: border 0.3s ease;
+        outline: none;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        border-color: var(--accent-coral);
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .form-submit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .form-message {
+        font-size: 0.9rem;
+        font-weight: 600;
+        min-height: 24px;
+      }
+      .form-message.success {
+        color: var(--accent-mint);
+      }
+      .form-message.error {
+        color: var(--accent-red);
       }
 
       footer {
@@ -2138,6 +2622,12 @@
         .gamif-grid {
           grid-template-columns: repeat(2, 1fr);
         }
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-wrapper {
+          grid-template-columns: 1fr;
+        }
       }
       @media (max-width: 768px) {
         .nav-links,
@@ -2174,6 +2664,10 @@
         .gamif-grid {
           grid-template-columns: 1fr;
         }
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
         .footer-grid {
           grid-template-columns: 1fr;
           gap: 30px;
@@ -2188,6 +2682,12 @@
         }
         .section-title {
           font-size: 2rem;
+        }
+        .services-cta-block {
+          padding: 40px 24px;
+        }
+        .contact-wrapper {
+          padding: 40px 28px;
         }
       }
       @media (max-width: 480px) {
@@ -2218,6 +2718,9 @@
         .lb-table td {
           padding: 12px 10px;
         }
+        .service-card {
+          padding: 24px 20px 22px;
+        }
       }
     </style>
   </head>
@@ -2228,9 +2731,11 @@
       <a href="#hero" onclick="closeMobile()">Home</a>
       <a href="#games" onclick="closeMobile()">Games</a>
       <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#services" onclick="closeMobile()">Services</a>
       <a href="#demo" onclick="closeMobile()">Demo</a>
       <a href="#leaderboard" onclick="closeMobile()">Leaderboard</a>
       <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
       <a href="#" class="btn btn-primary btn-sm" onclick="closeMobile()"
         >Play Now</a
       >
@@ -2245,9 +2750,11 @@
         <ul class="nav-links">
           <li><a href="#games">Games</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#demo">Demo</a></li>
           <li><a href="#leaderboard">Leaderboard</a></li>
           <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-cta">
           <a href="#" class="btn btn-primary btn-sm">Play Free</a>
@@ -2712,6 +3219,567 @@
       </div>
     </section>
 
+    <!-- ============ PREMIUM SERVICES SECTION ============ -->
+    <section id="services">
+      <div class="container">
+        <div style="text-align: center">
+          <div class="section-label">Our Platform</div>
+          <h2 class="section-title">Complete School Management Platform</h2>
+          <p class="section-sub">
+            Everything your school needs to manage academics, administration,
+            finance, communication, and student engagement from one intelligent
+            platform.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card sc-1 reveal">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
+              </svg>
+            </div>
+            <span class="service-badge">Core Module</span>
+            <div class="service-title">School Management</div>
+            <p class="service-desc">
+              Manage multiple schools from one centralized dashboard with
+              complete administrative control.
+            </p>
+            <ul class="service-features">
+              <li>Register new schools</li>
+              <li>Manage school information</li>
+              <li>Board management (CBSE, ICSE, etc.)</li>
+              <li>Academic year management</li>
+              <li>School administrators</li>
+              <li>Multi-school support</li>
+              <li>Centralized control panel</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-2 reveal" style="transition-delay: 0.05s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <div class="service-title">Teacher Management</div>
+            <p class="service-desc">
+              Organize teachers, departments, subjects, and responsibilities in
+              one place.
+            </p>
+            <ul class="service-features">
+              <li>Teacher registration</li>
+              <li>Teacher profile management</li>
+              <li>Subject allocation</li>
+              <li>School-wise teachers</li>
+              <li>Active/Inactive status</li>
+              <li>Teacher attendance integration</li>
+              <li>Timetable assignment</li>
+              <li>Teacher performance records</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-3 reveal" style="transition-delay: 0.1s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M17 21v-2a4 4 0 00-3-3.87M9 21v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75M12 11a4 4 0 100-8 4 4 0 000 8z"
+                />
+              </svg>
+            </div>
+            <div class="service-title">Student Management</div>
+            <p class="service-desc">
+              Manage complete student information throughout the academic
+              session.
+            </p>
+            <ul class="service-features">
+              <li>Student admission</li>
+              <li>Student profiles</li>
+              <li>Class & section assignment</li>
+              <li>Parent information</li>
+              <li>Roll number management</li>
+              <li>Search students</li>
+              <li>Student history</li>
+              <li>Export student data</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-4 reveal" style="transition-delay: 0.15s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"
+                />
+              </svg>
+            </div>
+            <div class="service-title">Books & Academic Content</div>
+            <p class="service-desc">
+              Create and organize digital learning resources for every class and
+              subject.
+            </p>
+            <ul class="service-features">
+              <li>Book management</li>
+              <li>Chapters & topics</li>
+              <li>Academic book mapping</li>
+              <li>Subject-wise books</li>
+              <li>Class-wise books</li>
+              <li>Chapter editing</li>
+              <li>Topic management</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-5 reveal" style="transition-delay: 0.2s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+            </div>
+            <div class="service-title">Teaching Report</div>
+            <p class="service-desc">
+              Track classroom teaching progress and syllabus completion.
+            </p>
+            <ul class="service-features">
+              <li>Daily teaching reports</li>
+              <li>Chapter completion</li>
+              <li>Topic tracking</li>
+              <li>Teacher progress</li>
+              <li>Monthly reports</li>
+              <li>Subject-wise reports</li>
+              <li>Pending syllabus</li>
+              <li>Analytics dashboard</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-6 reveal" style="transition-delay: 0.25s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+              </svg>
+            </div>
+            <span class="service-badge">Finance</span>
+            <div class="service-title">Fee Collection</div>
+            <p class="service-desc">
+              Digitally manage fee collection and payment tracking.
+            </p>
+            <ul class="service-features">
+              <li>Student fee records</li>
+              <li>Due reminders</li>
+              <li>Fee collection</li>
+              <li>Payment history</li>
+              <li>Outstanding fees</li>
+              <li>Monthly reports</li>
+              <li>Fee status</li>
+              <li>Financial analytics</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-7 reveal" style="transition-delay: 0.3s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="1" y="3" width="15" height="13" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <div class="service-title">School Transport</div>
+            <p class="service-desc">
+              Manage school transportation efficiently with route planning and
+              student allocation.
+            </p>
+            <ul class="service-features">
+              <li>Vehicle management</li>
+              <li>Driver management</li>
+              <li>Route management</li>
+              <li>Student pickup assignment</li>
+              <li>Fuel logs</li>
+              <li>Transport fees</li>
+              <li>Maintenance records</li>
+              <li>Transport dashboard</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-8 reveal" style="transition-delay: 0.35s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                <path d="M10 2h4v4h-4z" />
+                <line x1="8" y1="10" x2="16" y2="10" />
+                <line x1="8" y1="14" x2="14" y2="14" />
+              </svg>
+            </div>
+            <div class="service-title">Digital Notice Board</div>
+            <p class="service-desc">
+              Share important announcements instantly with students, teachers,
+              and parents.
+            </p>
+            <ul class="service-features">
+              <li>School notices</li>
+              <li>Class notices</li>
+              <li>Urgent announcements</li>
+              <li>Attach documents</li>
+              <li>Scheduled publishing</li>
+              <li>Notice history</li>
+              <li>School-wide communication</li>
+              <li>Rich text editor</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-9 reveal" style="transition-delay: 0.4s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+            </div>
+            <span class="service-badge">Student Engagement</span>
+            <div class="service-title">Prizes & Rewards</div>
+            <p class="service-desc">
+              Motivate students using an engaging reward and recognition system.
+            </p>
+            <ul class="service-features">
+              <li>Reward catalog</li>
+              <li>Points management</li>
+              <li>Digital rewards</li>
+              <li>Reward redemption</li>
+              <li>Winner tracking</li>
+              <li>Reward history</li>
+              <li>Stock management</li>
+              <li>Reward analytics</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div
+            class="service-card sc-10 reveal"
+            style="transition-delay: 0.45s"
+          >
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+            </div>
+            <div class="service-title">IQ Tests</div>
+            <p class="service-desc">
+              Create, schedule, and manage intelligent online assessments.
+            </p>
+            <ul class="service-features">
+              <li>Create IQ tests</li>
+              <li>Test scheduling</li>
+              <li>Age group selection</li>
+              <li>Test URL management</li>
+              <li>Result dates</li>
+              <li>Live status</li>
+              <li>Upcoming tests</li>
+              <li>Completed tests</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+          <div class="service-card sc-11 reveal" style="transition-delay: 0.5s">
+            <div class="service-icon-wrap">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="12" y1="18" x2="12" y2="12" />
+                <line x1="9" y1="15" x2="15" y2="15" />
+              </svg>
+            </div>
+            <div class="service-title">Test Applications</div>
+            <p class="service-desc">
+              Manage student registrations for IQ tests efficiently.
+            </p>
+            <ul class="service-features">
+              <li>Application management</li>
+              <li>Student information</li>
+              <li>Search applications</li>
+              <li>Test filtering</li>
+              <li>Approval workflow</li>
+              <li>Application tracking</li>
+              <li>Reports</li>
+              <li>Export data</li>
+            </ul>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="service-cta"
+              >Explore Module
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="services-cta-block reveal">
+          <h3>Ready to Transform Your School Management?</h3>
+          <p>
+            Empower your institution with an all-in-one platform designed to
+            simplify administration, improve academic management, streamline
+            communication, and enhance the learning experience.
+          </p>
+          <div class="services-cta-btns">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
+              target="_blank"
+              class="btn btn-primary"
+              >Get Started</a
+            >
+            <a
+              href="https://www.youtube.com/@learniqofficial/shorts"
+              target="_blank"
+              class="btn btn-ghost-purple"
+              >Book a Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="demo">
       <div class="container">
         <div style="text-align: center">
@@ -2853,7 +3921,6 @@
       </div>
     </section>
 
-    <!-- APP SHOWCASE with images -->
     <section id="showcase">
       <div class="container" style="text-align: center; margin-bottom: 50px">
         <div class="section-label">App Screens</div>
@@ -3301,6 +4368,103 @@
       </div>
     </section>
 
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact">
+      <div class="container">
+        <div style="text-align: center">
+          <div class="section-label">Get in Touch</div>
+          <h2 class="section-title">We'd Love to Hear From You</h2>
+          <p class="section-sub">
+            Whether you're a parent, school administrator, or a curious student
+            — drop us a message and we'll get back to you promptly.
+          </p>
+        </div>
+        <div class="contact-wrapper reveal">
+          <div class="contact-info">
+            <h3>Contact LearnIQ</h3>
+            <p>
+              Reach out for partnerships, school onboarding, support, or any
+              other inquiries.
+            </p>
+            <div class="contact-details">
+              <div class="contact-detail">
+                <div class="icon">📧</div>
+                <span>learniqtech@gmail.com</span>
+              </div>
+              <div class="contact-detail">
+                <div class="icon">📱</div>
+                <span>+91 72065 10271</span>
+              </div>
+              <div class="contact-detail">
+                <div class="icon">📍</div>
+                <span>Chandigarh, India</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name *</label
+                  ><input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label
+                  ><input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="role">I am a...</label
+                ><select id="role" name="role">
+                  <option value="parent">Parent</option>
+                  <option value="school">School Administrator</option>
+                  <option value="student">Student</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label
+                ><input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="How can we help?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label
+                ><textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Tell us more..."
+                ></textarea>
+              </div>
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                  <span>✉️</span> Send Message
+                </button>
+                <div id="formStatus" class="form-message"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section style="padding: 80px 0">
       <div class="container">
         <div
@@ -3481,8 +4645,7 @@
                       stroke-width="0.8889"
                       d="m12.899333333333331 20.50782222222222 7.923955555555556 -4.507599999999999 -7.923955555555556 -4.508044444444445Z"
                     ></path>
-                  </g>
-                </svg> </a
+                  </g></svg></a
               ><a href="" target="_blank" class="social-btn">💬</a>
             </div>
           </div>
@@ -3666,7 +4829,7 @@
         fsContainer.appendChild(el);
       }
 
-      /* Tic Tac Toe */
+      // Tic Tac Toe
       let tttBoard,
         tttTurn,
         tttLocked,
@@ -3684,10 +4847,9 @@
         [2, 4, 6],
       ];
       function checkWinner(b) {
-        for (const [a, c, d] of wins) {
+        for (const [a, c, d] of wins)
           if (b[a] && b[a] === b[c] && b[a] === b[d])
             return { winner: b[a], combo: [a, c, d] };
-        }
         if (b.every(Boolean)) return { winner: "draw", combo: [] };
         return null;
       }
@@ -3807,7 +4969,7 @@
         );
       resetTTT();
 
-      /* Math Quiz */
+      // Math Quiz
       let quizScore = 0,
         quizStreak = 0,
         quizLevel = 1,
@@ -3909,7 +5071,7 @@
       }
       startQuiz();
 
-      /* Memory Game — with 5‑second preview */
+      // Memory Game
       const memEmojis = ["🧠", "⚡", "🔮", "🎯", "🚀", "🌟", "🎮", "🏆"];
       let memCards = [],
         memFlipped = [],
@@ -3990,7 +5152,7 @@
       }
       initMemory();
 
-      /* Number Logic */
+      // Number Logic
       let nlogicSolution,
         nlogicGridData,
         nlogicSelected = null;
@@ -4085,7 +5247,7 @@
         .join("");
       resetNumberLogic();
 
-      /* Reflex Training */
+      // Reflex Training
       let reflexTimeout,
         reflexStart,
         reflexWaiting = false;
@@ -4128,7 +5290,7 @@
       }
       startReflexRound();
 
-      /* Pattern Recon */
+      // Pattern Recon
       const shapes = ["🔵", "🟥", "🟩", "🟨"];
       let patternAnswer,
         patternActive = true;
@@ -4182,9 +5344,8 @@
       }
       generatePattern();
 
-      /* ---------- Showcase Image Gallery ---------- */
+      // Showcase Gallery
       (function buildShowcase() {
-        // ★ Replace these filenames with your own screenshots.
         const screenImages = [
           "images/img (1).jpeg",
           "images/img (2).jpeg",
@@ -4197,21 +5358,101 @@
           "images/img (9).jpeg",
           "images/img (10).jpeg",
         ];
-
         const track = document.getElementById("showcaseTrack");
         if (!track || screenImages.length === 0) return;
-
         const createImageCard = (src) =>
           `<div class="showcase-screen"><img src="${src}" alt="App screenshot" /></div>`;
-
         const originalCards = screenImages.map(createImageCard).join("");
         track.innerHTML = originalCards + originalCards;
-
-        const totalImages = screenImages.length;
-        const baseSpeed = 20; // seconds per original set
-        const newSpeed = Math.max(10, totalImages * 2);
+        const newSpeed = Math.max(10, screenImages.length * 2);
         track.style.animationDuration = newSpeed + "s";
       })();
+
+      // Contact Form (Multi-Fallback with Gmail Redirect)
+      async function handleContactSubmit(e) {
+        e.preventDefault();
+        const form = document.getElementById("contactForm");
+        const statusDiv = document.getElementById("formStatus");
+        const submitBtn = document.getElementById("submitBtn");
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const role = formData.get("role");
+        const subject = formData.get("subject");
+        const message = formData.get("message");
+
+        statusDiv.textContent = "Sending...";
+        statusDiv.className = "form-message";
+        submitBtn.disabled = true;
+
+        const payload = { name, email, role, subject, message };
+
+        const attempts = [
+          {
+            name: "Web3Forms",
+            url: "https://api.web3forms.com/submit",
+            body: {
+              access_key: "edc2f605-10a5-4e84-81d1-314bdaf3634a",
+              ...payload,
+            },
+          },
+          {
+            name: "Formspree",
+            url: "https://formspree.io/f/mjgdqyey",
+            body: payload,
+          },
+          {
+            name: "Getform",
+            url: "https://getform.io/f/YOUR_GETFORM_FORM_ID",
+            body: payload,
+          },
+          {
+            name: "Formspark",
+            url: "https://submit-form.com/YOUR_FORMSPARK_FORM_ID",
+            body: payload,
+          },
+          {
+            name: "StaticForms",
+            url: "https://api.staticforms.xyz/submit",
+            body: { accessKey: "YOUR_STATICFORMS_ACCESS_KEY", ...payload },
+          },
+        ];
+
+        let success = false;
+        for (const attempt of attempts) {
+          try {
+            const response = await fetch(attempt.url, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(attempt.body),
+            });
+            if (response.ok) {
+              success = true;
+              statusDiv.textContent = `✅ Message sent successfully! (via ${attempt.name})`;
+              statusDiv.className = "form-message success";
+              form.reset();
+              break;
+            }
+          } catch (error) {
+            console.warn(`${attempt.name} failed:`, error);
+          }
+        }
+
+        if (!success) {
+          const mailSubject = encodeURIComponent(
+            subject || "Contact from LearnIQ",
+          );
+          const mailBody = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nRole: ${role}\n\nMessage:\n${message}`,
+          );
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=learniqtech@gmail.com&su=${mailSubject}&body=${mailBody}`;
+          window.open(gmailUrl, "_blank");
+          statusDiv.textContent =
+            "All services failed. Opening Gmail for you...";
+          statusDiv.className = "form-message error";
+        }
+        submitBtn.disabled = false;
+      }
     </script>
   </body>
 </html>
