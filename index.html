@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO Meta Tags -->
     <meta
       name="description"
       content="LearnIQ – Train your brain with fun games. Boost IQ, logic, memory & reflexes. Complete school management platform for students, teachers & parents."
@@ -14,7 +13,6 @@
     />
     <meta name="author" content="LearnIQ" />
     <link rel="canonical" href="https://learniq.in/" />
-    <!-- Open Graph / Social -->
     <meta
       property="og:title"
       content="LearnIQ – Train Your Brain While Having Fun"
@@ -38,7 +36,6 @@
       name="twitter:description"
       content="Play, learn, and manage your school. Free brain games and a full school management platform."
     />
-
     <title>
       LearnIQ – Train Your Brain While Having Fun | Brain Games & School
       Management
@@ -50,6 +47,8 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -58,13 +57,13 @@
     <div class="mobile-menu" id="mobileMenu">
       <button class="mobile-close" id="mobileClose">✕</button>
       <a href="#hero" onclick="closeMobile()">Home</a>
-      <a href="#games" onclick="closeMobile()">Games</a>
-      <a href="#skills" onclick="closeMobile()">Skills</a>
       <a href="#services" onclick="closeMobile()">Services</a>
-      <a href="#demo" onclick="closeMobile()">Demo</a>
-      <a href="#leaderboard" onclick="closeMobile()">Leaderboard</a>
+      <a href="#showcase" onclick="closeMobile()">Screenshots</a>
+      <a href="#features" onclick="closeMobile()">Features</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#games" onclick="closeMobile()">Games</a>
       <a href="#testimonials" onclick="closeMobile()">Reviews</a>
-      <a href="#contact" onclick="closeMobile()">Contact</a>
+      <a href="#hero" onclick="closeMobile()">Contact</a>
       <a href="#" class="btn btn-primary btn-sm" onclick="closeMobile()"
         >Play Now</a
       >
@@ -85,13 +84,13 @@
           LearnIQ
         </a>
         <ul class="nav-links">
-          <li><a href="#games">Games</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#demo">Demo</a></li>
-          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#showcase">Screenshots</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#games">Games</a></li>
           <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#hero">Contact</a></li>
         </ul>
         <div class="nav-cta">
           <a href="#" class="btn btn-primary btn-sm">Play Free</a>
@@ -102,7 +101,7 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ============ 1. HERO SECTION ============ -->
     <section id="hero">
       <div class="floating-symbols" id="floatingSymbols"></div>
       <div class="hero-bg-shapes">
@@ -112,9 +111,9 @@
       </div>
       <div class="container">
         <div class="hero-inner">
-          <div class="hero-content reveal reveal-left">
+          <div class="hero-content" data-aos="fade-right">
             <div class="hero-badge">
-              <span class="badge-dot"></span>🎮 Now Live
+              <span class="badge-dot"></span>✦ 7-Day Free Trial — No Credit Card
             </div>
             <h1 class="hero-title">
               <span class="line-1">Train Your</span><br />
@@ -124,25 +123,8 @@
             <p class="hero-desc">
               Level up your IQ, sharpen logic, supercharge memory, and develop
               lightning-fast reflexes — all through addictive, beautifully
-              designed brain games.
+              designed brain games. Plus a complete school management platform.
             </p>
-            <div class="hero-btns">
-              <a href="#demo" class="btn btn-primary"
-                ><span>⚡</span> Play Now</a
-              >
-              <a
-                href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
-                target="_blank"
-                class="btn btn-ghost"
-                ><span>📱</span> Download App</a
-              >
-              <a
-                href="https://www.youtube.com/@learniqofficial/shorts"
-                target="_blank"
-                class="btn btn-red btn-sm"
-                ><span>▶</span> Watch Demo</a
-              >
-            </div>
             <div class="hero-stats">
               <div>
                 <div class="hero-stat-num">
@@ -170,75 +152,99 @@
               </div>
             </div>
           </div>
-          <div class="hero-phone-wrap reveal reveal-right">
-            <div class="phone-glow-ring-2"></div>
-            <div class="phone-glow-ring"></div>
-            <div class="phone-mockup">
-              <div class="phone-notch"></div>
-              <div class="phone-screen-content">
-                <div class="phone-app-header">
-                  <span class="phone-app-logo">LEARNIQ</span>
-                  <span class="phone-xp-pill">⚡ 2,480 XP</span>
-                </div>
-                <div class="phone-game-card">
-                  <div class="phone-game-title">🧩 Logic Puzzle</div>
-                  <div class="phone-progress-bar">
-                    <div class="phone-progress-fill" style="--w: 82%"></div>
-                  </div>
-                  <div style="font-size: 10px; color: #8b9598">
-                    Level 24 · 82% complete
-                  </div>
-                </div>
-                <div class="phone-game-card">
-                  <div class="phone-game-title">🔢 Math Sprint</div>
-                  <div class="phone-progress-bar">
-                    <div
-                      class="phone-progress-fill purple"
-                      style="--w: 58%"
-                    ></div>
-                  </div>
-                  <div style="font-size: 10px; color: #8b9598">
-                    Level 18 · 58% complete
-                  </div>
-                </div>
-                <div class="phone-game-card">
-                  <div class="phone-game-title">⚡ Reflex Master</div>
-                  <div class="phone-progress-bar">
-                    <div class="phone-progress-fill red" style="--w: 91%"></div>
-                  </div>
-                  <div style="font-size: 10px; color: #8b9598">
-                    Level 31 · 91% complete
-                  </div>
-                </div>
-                <div
-                  style="
-                    font-size: 10px;
-                    color: #636e72;
-                    font-weight: 700;
-                    margin: 10px 0 6px;
-                    font-family:
-                      &quot;Fredoka&quot;, &quot;Nunito&quot;, sans-serif;
-                  "
+          <!-- Free Trial Form — replaces phone mockup -->
+          <div
+            class="hero-trial-wrap"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <div class="trial-card">
+              <div class="trial-header">
+                <span class="trial-badge"
+                  >🎁 Full access for 7 days — all modules, no
+                  restrictions</span
                 >
-                  🔥 7-Day Streak
-                </div>
-                <div class="phone-streak-row">
-                  <div class="phone-day done">M</div>
-                  <div class="phone-day done">T</div>
-                  <div class="phone-day done">W</div>
-                  <div class="phone-day done">T</div>
-                  <div class="phone-day today">F</div>
-                  <div class="phone-day off">S</div>
-                  <div class="phone-day off">S</div>
-                </div>
+                <h3>Start Your Free Trial</h3>
+                <p>2 minutes to fill. We set everything up for your school.</p>
               </div>
+              <form
+                id="trialForm"
+                class="trial-form"
+                onsubmit="handleTrialSubmit(event)"
+              >
+                <div class="trial-field">
+                  <label for="trialName">Full Name *</label>
+                  <input
+                    type="text"
+                    id="trialName"
+                    name="name"
+                    required
+                    placeholder="e.g., jatin Singh"
+                  />
+                </div>
+                <div class="trial-field">
+                  <label for="trialEmail">Official Email *</label>
+                  <input
+                    type="email"
+                    id="trialEmail"
+                    name="email"
+                    required
+                    placeholder="name@school.edu"
+                  />
+                </div>
+                <div class="trial-field">
+                  <label for="trialPhone">Phone *</label>
+                  <input
+                    type="tel"
+                    id="trialPhone"
+                    name="phone"
+                    required
+                    placeholder="+91 98XXXXXXX"
+                  />
+                </div>
+                <div class="trial-field">
+                  <label for="trialSchool">School Name *</label>
+                  <input
+                    type="text"
+                    id="trialSchool"
+                    name="school"
+                    required
+                    placeholder="e.g., delhi Public School"
+                  />
+                </div>
+                <div class="trial-field">
+                  <label for="trialStudents">No. of Students</label>
+                  <select id="trialStudents" name="students">
+                    <option value="">Choose...</option>
+                    <option value="1-100">1–100</option>
+                    <option value="101-500">101–500</option>
+                    <option value="501-1000">501–1,000</option>
+                    <option value="1000+">1,000+</option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary trial-btn"
+                  id="trialBtn"
+                >
+                  <span>🚀</span> Activate Free Trial
+                </button>
+                <div id="trialStatus" class="form-message"></div>
+                <p class="trial-note">
+                  By submitting, you agree to our
+                  <a href="#">Privacy Policy</a> &amp; <a href="#">Terms</a>.
+                </p>
+                <p class="trial-assurance">
+                  🔒 No spam · No sales pressure · Call within 2 hours
+                </p>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Ticker -->
+    <!-- ============ 3. DASHBOARD PREVIEW (Stats Ticker) ============ -->
     <div class="stats-ticker">
       <div class="ticker-inner" id="ticker">
         <div class="ticker-item">
@@ -313,256 +319,7 @@
       </div>
     </div>
 
-    <!-- Games Section -->
-    <section id="games">
-      <div class="container">
-        <div style="text-align: center">
-          <div class="section-label">Game Library</div>
-          <h2 class="section-title">Choose Your Challenge</h2>
-          <p class="section-sub">
-            6 brain-boosting games scientifically designed to develop different
-            cognitive skills while keeping you addicted.
-          </p>
-        </div>
-        <div class="games-grid">
-          <div class="game-card reveal">
-            <div class="game-icon-wrap">❌</div>
-            <div class="game-name">Tic Tac Toe</div>
-            <div class="game-desc">
-              Classic strategy game with AI opponent. Think 3 moves ahead and
-              dominate the board.
-            </div>
-            <div class="game-tag">⚡ Improves Logic</div>
-            <div class="game-footer">
-              <div class="game-players">
-                <div class="players-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                12.4K online
-              </div>
-              <a href="#demo-ttt" class="btn btn-primary btn-sm">Play</a>
-            </div>
-          </div>
-          <div class="game-card reveal" style="transition-delay: 0.1s">
-            <div class="game-icon-wrap">🔢</div>
-            <div class="game-name">Number Logic</div>
-            <div class="game-desc">
-              Fill grids with numbers using pure deductive reasoning. Advanced
-              Sudoku-style challenges.
-            </div>
-            <div class="game-tag">🧩 Problem Solving</div>
-            <div class="game-footer">
-              <div class="game-players">
-                <div class="players-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                8.7K online
-              </div>
-              <a href="#demo-numberlogic" class="btn btn-secondary btn-sm"
-                >Play</a
-              >
-            </div>
-          </div>
-          <div class="game-card reveal" style="transition-delay: 0.2s">
-            <div class="game-icon-wrap">➕</div>
-            <div class="game-name">Math Quiz</div>
-            <div class="game-desc">
-              Speed-solve equations before the timer hits zero. Unlock harder
-              levels as your score climbs.
-            </div>
-            <div class="game-tag">🚀 Math Speed</div>
-            <div class="game-footer">
-              <div class="game-players">
-                <div class="players-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                21.1K online
-              </div>
-              <a href="#demo-mathquiz" class="btn btn-primary btn-sm">Play</a>
-            </div>
-          </div>
-          <div class="game-card reveal" style="transition-delay: 0.3s">
-            <div class="game-icon-wrap">🎴</div>
-            <div class="game-name">Memory Challenge</div>
-            <div class="game-desc">
-              Flip and match cards in record time. Tests short-term recall and
-              improves working memory.
-            </div>
-            <div class="game-tag">🧠 Memory Power</div>
-            <div class="game-footer">
-              <div class="game-players">
-                <div class="players-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                9.3K online
-              </div>
-              <a href="#demo-memory" class="btn btn-secondary btn-sm">Play</a>
-            </div>
-          </div>
-          <div class="game-card reveal" style="transition-delay: 0.4s">
-            <div class="game-icon-wrap">⚡</div>
-            <div class="game-name">Reflex Training</div>
-            <div class="game-desc">
-              React to visual stimuli in milliseconds. Track your reaction time
-              improvements over time.
-            </div>
-            <div class="game-tag">⚡ Reflexes</div>
-            <div class="game-footer">
-              <div class="game-players">
-                <div class="players-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                15.6K online
-              </div>
-              <a href="#demo-reflex" class="btn btn-red btn-sm">Play</a>
-            </div>
-          </div>
-          <div class="game-card reveal" style="transition-delay: 0.5s">
-            <div class="game-icon-wrap">🔮</div>
-            <div class="game-name">Pattern Recon</div>
-            <div class="game-desc">
-              Identify hidden sequences, visual patterns, and predict what comes
-              next. Pure IQ boost.
-            </div>
-            <div class="game-tag">🎯 IQ Development</div>
-            <div class="game-footer">
-              <div class="game-players">
-                <div class="players-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                6.8K online
-              </div>
-              <a href="#demo-patternrecon" class="btn btn-primary btn-sm"
-                >Play</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
-        <div style="text-align: center">
-          <div class="section-label">Skill Tracker</div>
-          <h2 class="section-title">Build Every Brain Skill</h2>
-          <p class="section-sub">
-            Our AI tracks your cognitive development across 7 key brain
-            dimensions in real time.
-          </p>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card sk1 reveal">
-            <div class="skill-header">
-              <div class="skill-icon">🔵</div>
-              <div>
-                <div class="skill-name">Logical Thinking</div>
-                <div class="skill-level">Level 24 · Expert</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="82"></div>
-            </div>
-            <div class="skill-nums">
-              <span>82 / 100</span><span>+14 this week</span>
-            </div>
-          </div>
-          <div class="skill-card sk2 reveal" style="transition-delay: 0.1s">
-            <div class="skill-header">
-              <div class="skill-icon">🟣</div>
-              <div>
-                <div class="skill-name">Problem Solving</div>
-                <div class="skill-level">Level 21 · Advanced</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="74"></div>
-            </div>
-            <div class="skill-nums">
-              <span>74 / 100</span><span>+9 this week</span>
-            </div>
-          </div>
-          <div class="skill-card sk3 reveal" style="transition-delay: 0.2s">
-            <div class="skill-header">
-              <div class="skill-icon">🟢</div>
-              <div>
-                <div class="skill-name">Memory Power</div>
-                <div class="skill-level">Level 18 · Advanced</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="65"></div>
-            </div>
-            <div class="skill-nums">
-              <span>65 / 100</span><span>+22 this week</span>
-            </div>
-          </div>
-          <div class="skill-card sk4 reveal" style="transition-delay: 0.3s">
-            <div class="skill-header">
-              <div class="skill-icon">🟡</div>
-              <div>
-                <div class="skill-name">Focus & Attention</div>
-                <div class="skill-level">Level 19 · Advanced</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="71"></div>
-            </div>
-            <div class="skill-nums">
-              <span>71 / 100</span><span>+7 this week</span>
-            </div>
-          </div>
-          <div class="skill-card sk5 reveal" style="transition-delay: 0.4s">
-            <div class="skill-header">
-              <div class="skill-icon">🔴</div>
-              <div>
-                <div class="skill-name">Math Speed</div>
-                <div class="skill-level">Level 28 · Master</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="91"></div>
-            </div>
-            <div class="skill-nums">
-              <span>91 / 100</span><span>+18 this week</span>
-            </div>
-          </div>
-          <div class="skill-card sk6 reveal" style="transition-delay: 0.5s">
-            <div class="skill-header">
-              <div class="skill-icon">⚡</div>
-              <div>
-                <div class="skill-name">Reflexes</div>
-                <div class="skill-level">Level 22 · Expert</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="87"></div>
-            </div>
-            <div class="skill-nums">
-              <span>87 / 100</span><span>+11 this week</span>
-            </div>
-          </div>
-          <div class="skill-card sk7 reveal" style="transition-delay: 0.6s">
-            <div class="skill-header">
-              <div class="skill-icon">🧠</div>
-              <div>
-                <div class="skill-name">IQ Development</div>
-                <div class="skill-level">Level 25 · Expert</div>
-              </div>
-            </div>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" data-width="78"></div>
-            </div>
-            <div class="skill-nums">
-              <span>78 / 100</span><span>+16 this week</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PREMIUM SERVICES SECTION ============ -->
+    <!-- ============ 2. MAIN SERVICES ============ -->
     <section id="services">
       <div class="container">
         <div style="text-align: center">
@@ -576,7 +333,7 @@
         </div>
         <div class="services-grid">
           <!-- 1. School Management -->
-          <div class="service-card sc-1 reveal">
+          <div class="service-card sc-1" data-aos="fade-up" data-aos-delay="0">
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -610,8 +367,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -621,12 +377,11 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 2. Teacher Management -->
-          <div class="service-card sc-2 reveal" style="transition-delay: 0.05s">
+          <div class="service-card sc-2" data-aos="fade-up" data-aos-delay="50">
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -659,8 +414,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -670,12 +424,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 3. Student Management -->
-          <div class="service-card sc-3 reveal" style="transition-delay: 0.1s">
+          <div
+            class="service-card sc-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -709,8 +466,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -720,12 +476,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 4. Digital Library & Books -->
-          <div class="service-card sc-4 reveal" style="transition-delay: 0.15s">
+          <div
+            class="service-card sc-4"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -759,8 +518,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -770,12 +528,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 5. Teaching Report -->
-          <div class="service-card sc-5 reveal" style="transition-delay: 0.2s">
+          <div
+            class="service-card sc-5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -811,8 +572,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -822,12 +582,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 6. Fee Collection -->
-          <div class="service-card sc-6 reveal" style="transition-delay: 0.25s">
+          <div
+            class="service-card sc-6"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -860,8 +623,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -871,12 +633,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 7. School Transport -->
-          <div class="service-card sc-7 reveal" style="transition-delay: 0.3s">
+          <div
+            class="service-card sc-7"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -911,8 +676,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -922,12 +686,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 8. Notice Board -->
-          <div class="service-card sc-8 reveal" style="transition-delay: 0.35s">
+          <div
+            class="service-card sc-8"
+            data-aos="fade-up"
+            data-aos-delay="350"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -962,8 +729,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -973,12 +739,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 9. Rewards & Recognition -->
-          <div class="service-card sc-9 reveal" style="transition-delay: 0.4s">
+          <div
+            class="service-card sc-9"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -1011,8 +780,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -1022,14 +790,14 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 10. IQ Tests -->
           <div
-            class="service-card sc-10 reveal"
-            style="transition-delay: 0.45s"
+            class="service-card sc-10"
+            data-aos="fade-up"
+            data-aos-delay="450"
           >
             <div class="service-icon-wrap">
               <svg
@@ -1063,8 +831,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -1074,12 +841,15 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
           <!-- 11. Test Applications -->
-          <div class="service-card sc-11 reveal" style="transition-delay: 0.5s">
+          <div
+            class="service-card sc-11"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <div class="service-icon-wrap">
               <svg
                 viewBox="0 0 24 24"
@@ -1115,8 +885,7 @@
               href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
               target="_blank"
               class="service-cta"
-            >
-              Explore Module
+              >Explore Module
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -1126,12 +895,11 @@
                 stroke-linejoin="round"
               >
                 <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></a>
           </div>
         </div>
-        <div class="services-cta-block reveal">
+        <div class="services-cta-block" data-aos="fade-up">
           <h3>Ready to Transform Your School Management?</h3>
           <p>
             Empower your institution with an all-in-one platform designed to
@@ -1145,19 +913,769 @@
               class="btn btn-primary"
               >Get Started</a
             >
-            <a href="#contact" class="btn btn-ghost-purple">Book a Demo</a>
+            <a href="#hero" class="btn btn-ghost-purple">Book a Demo</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Demo Section -->
+    <!-- ============ 4. APPLICATION SCREENSHOTS ============ -->
+    <section id="showcase">
+      <div class="container" style="text-align: center; margin-bottom: 50px">
+        <div class="section-label">App Screens</div>
+        <h2 class="section-title" data-aos="fade-up">Your Command Center</h2>
+        <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+          Explore the real LearnIQ interface – gaming meets learning.
+        </p>
+      </div>
+      <div style="overflow: hidden">
+        <div class="showcase-track" id="showcaseTrack"></div>
+      </div>
+    </section>
+
+    <!-- ============ APP FEATURES SECTION (NEW) ============ -->
+    <section
+      id="app-features"
+      style="
+        background: linear-gradient(
+          180deg,
+          #fffdf7 0%,
+          #fff8f0 50%,
+          #fffdf7 100%
+        );
+        padding: 100px 0;
+      "
+    >
+      <div class="container">
+        <div style="text-align: center">
+          <div class="section-label">Beyond Management</div>
+          <h2 class="section-title" data-aos="fade-up">
+            More Than Just School ERP
+          </h2>
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+            Discover a full ecosystem of tools that engage students and simplify
+            daily tasks.
+          </p>
+        </div>
+        <div
+          class="features-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+          "
+        >
+          <!-- Quizzes -->
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="0">
+            <div
+              class="feature-icon"
+              style="background: var(--accent-coral-light)"
+            >
+              🧩
+            </div>
+            <h3>Brain Quizzes</h3>
+            <p>
+              Interactive IQ & subject quizzes that make learning addictive.
+              Real-time scoring and leaderboards.
+            </p>
+            <div class="feature-badge">Gamified</div>
+          </div>
+          <!-- Games -->
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+            <div
+              class="feature-icon"
+              style="background: var(--accent-purple-light)"
+            >
+              🎮
+            </div>
+            <h3>Brain Games</h3>
+            <p>
+              6 scientifically designed games to boost logic, memory, focus, and
+              reflexes. Play directly in browser.
+            </p>
+            <div class="feature-badge">Play Now</div>
+          </div>
+          <!-- Mood Tracker -->
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+            <div
+              class="feature-icon"
+              style="background: var(--accent-mint-light)"
+            >
+              😊
+            </div>
+            <h3>Mood Tracker</h3>
+            <p>
+              Daily emotion check-ins with beautiful visual insights. Helps
+              teachers spot wellbeing trends.
+            </p>
+            <div class="feature-badge">Wellness</div>
+          </div>
+          <!-- Expense Tracker -->
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              class="feature-icon"
+              style="background: var(--accent-amber-light)"
+            >
+              💰
+            </div>
+            <h3>Expense Tracker</h3>
+            <p>
+              Log school expenses, generate reports, and manage budgets
+              effortlessly. Perfect for administrators.
+            </p>
+            <div class="feature-badge">Finance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. FEATURES SECTION ============ -->
+    <section id="features">
+      <!-- Skills Sub-section -->
+      <div id="skills">
+        <div class="container">
+          <div style="text-align: center">
+            <div class="section-label">Skill Tracker</div>
+            <h2 class="section-title" data-aos="fade-up">
+              Build Every Brain Skill
+            </h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+              Our AI tracks your cognitive development across 7 key brain
+              dimensions in real time.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card sk1" data-aos="fade-up" data-aos-delay="0">
+              <div class="skill-header">
+                <div class="skill-icon">🔵</div>
+                <div>
+                  <div class="skill-name">Logical Thinking</div>
+                  <div class="skill-level">Level 24 · Expert</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+              <div class="skill-nums">
+                <span>82 / 100</span><span>+14 this week</span>
+              </div>
+            </div>
+            <div class="skill-card sk2" data-aos="fade-up" data-aos-delay="50">
+              <div class="skill-header">
+                <div class="skill-icon">🟣</div>
+                <div>
+                  <div class="skill-name">Problem Solving</div>
+                  <div class="skill-level">Level 21 · Advanced</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="74"></div>
+              </div>
+              <div class="skill-nums">
+                <span>74 / 100</span><span>+9 this week</span>
+              </div>
+            </div>
+            <div class="skill-card sk3" data-aos="fade-up" data-aos-delay="100">
+              <div class="skill-header">
+                <div class="skill-icon">🟢</div>
+                <div>
+                  <div class="skill-name">Memory Power</div>
+                  <div class="skill-level">Level 18 · Advanced</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="65"></div>
+              </div>
+              <div class="skill-nums">
+                <span>65 / 100</span><span>+22 this week</span>
+              </div>
+            </div>
+            <div class="skill-card sk4" data-aos="fade-up" data-aos-delay="150">
+              <div class="skill-header">
+                <div class="skill-icon">🟡</div>
+                <div>
+                  <div class="skill-name">Focus & Attention</div>
+                  <div class="skill-level">Level 19 · Advanced</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="71"></div>
+              </div>
+              <div class="skill-nums">
+                <span>71 / 100</span><span>+7 this week</span>
+              </div>
+            </div>
+            <div class="skill-card sk5" data-aos="fade-up" data-aos-delay="200">
+              <div class="skill-header">
+                <div class="skill-icon">🔴</div>
+                <div>
+                  <div class="skill-name">Math Speed</div>
+                  <div class="skill-level">Level 28 · Master</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="91"></div>
+              </div>
+              <div class="skill-nums">
+                <span>91 / 100</span><span>+18 this week</span>
+              </div>
+            </div>
+            <div class="skill-card sk6" data-aos="fade-up" data-aos-delay="250">
+              <div class="skill-header">
+                <div class="skill-icon">⚡</div>
+                <div>
+                  <div class="skill-name">Reflexes</div>
+                  <div class="skill-level">Level 22 · Expert</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="87"></div>
+              </div>
+              <div class="skill-nums">
+                <span>87 / 100</span><span>+11 this week</span>
+              </div>
+            </div>
+            <div class="skill-card sk7" data-aos="fade-up" data-aos-delay="300">
+              <div class="skill-header">
+                <div class="skill-icon">🧠</div>
+                <div>
+                  <div class="skill-name">IQ Development</div>
+                  <div class="skill-level">Level 25 · Expert</div>
+                </div>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78"></div>
+              </div>
+              <div class="skill-nums">
+                <span>78 / 100</span><span>+16 this week</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gamification Sub-section -->
+      <div id="gamification" style="background: #fffdf7; padding: 100px 0">
+        <div class="container">
+          <div style="text-align: center">
+            <div class="section-label">Gamification</div>
+            <h2 class="section-title" data-aos="fade-up">
+              Stay Hooked. Stay Sharp.
+            </h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+              A full reward ecosystem designed to keep you coming back every
+              single day.
+            </p>
+          </div>
+          <div class="gamif-grid">
+            <div class="gamif-card" data-aos="fade-up" data-aos-delay="0">
+              <span class="gamif-icon">🔥</span>
+              <div class="gamif-title">Daily Streaks</div>
+              <div class="gamif-desc">
+                Build an unbreakable habit. Earn bonus XP and exclusive badges
+                for every milestone.
+              </div>
+              <div class="streak-days">
+                <div class="streak-day lit">1</div>
+                <div class="streak-day lit">2</div>
+                <div class="streak-day lit">3</div>
+                <div class="streak-day lit">4</div>
+                <div class="streak-day lit">5</div>
+                <div class="streak-day lit">6</div>
+                <div class="streak-day lit">7</div>
+                <div class="streak-day dim">8</div>
+                <div class="streak-day dim">9</div>
+                <div class="streak-day dim">10</div>
+              </div>
+            </div>
+            <div class="gamif-card" data-aos="fade-up" data-aos-delay="50">
+              <span class="gamif-icon">⚡</span>
+              <div class="gamif-title">XP Progression</div>
+              <div class="gamif-desc">
+                Earn XP with every game, unlock new levels, and watch your rank
+                climb the global charts.
+              </div>
+              <div class="xp-row">
+                <span class="xp-label">Level 24 → 25</span
+                ><span class="xp-val">2,480 / 3,000 XP</span>
+              </div>
+              <div class="xp-bar-track"><div class="xp-bar-fill"></div></div>
+            </div>
+            <div class="gamif-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="gamif-icon">🏅</span>
+              <div class="gamif-title">Rank Badges</div>
+              <div class="gamif-desc">
+                Prove your mastery. Collect rare badges that showcase your brain
+                skills to the world.
+              </div>
+              <div class="rank-badges">
+                <div class="rank-badge rank-gold">🥇 IQ Master</div>
+                <div class="rank-badge rank-silver">🥈 Speed Pro</div>
+                <div class="rank-badge rank-bronze">🥉 Logic Star</div>
+              </div>
+            </div>
+            <div class="gamif-card" data-aos="fade-up" data-aos-delay="150">
+              <span class="gamif-icon">🎯</span>
+              <div class="gamif-title">Weekly Challenges</div>
+              <div class="gamif-desc">
+                Special limited-time events with massive rewards. Compete
+                globally every week.
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                <span
+                  style="
+                    padding: 6px 12px;
+                    background: var(--accent-coral-light);
+                    border-radius: 8px;
+                    font-size: 11px;
+                    color: var(--accent-coral);
+                    font-weight: 700;
+                  "
+                  >🧩 Puzzle Week</span
+                ><span
+                  style="
+                    padding: 6px 12px;
+                    background: var(--accent-purple-light);
+                    border-radius: 8px;
+                    font-size: 11px;
+                    color: var(--accent-purple);
+                    font-weight: 700;
+                  "
+                  >⏱ Speed Trial</span
+                >
+              </div>
+            </div>
+            <div class="gamif-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="gamif-icon">🧠</span>
+              <div class="gamif-title">Brain Score</div>
+              <div class="gamif-desc">
+                Your overall cognitive rating updated in real-time based on
+                performance across all games.
+              </div>
+              <div class="brain-score-wrap">
+                <span
+                  class="brain-score-num counter"
+                  data-target="142"
+                  data-suffix=""
+                  >0</span
+                ><span class="brain-score-label">IQ Brain Score</span>
+              </div>
+            </div>
+            <div class="gamif-card" data-aos="fade-up" data-aos-delay="250">
+              <span class="gamif-icon">🪙</span>
+              <div class="gamif-title">Reward System</div>
+              <div class="gamif-desc">
+                Earn coins from every win. Spend on custom themes, power-ups,
+                hints, and exclusive game skins.
+              </div>
+              <div
+                style="
+                  font-family:
+                    &quot;Fredoka&quot;, &quot;Nunito&quot;, sans-serif;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  color: #c78500;
+                "
+              >
+                🪙 4,250 Coins
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kids Sub-section -->
+      <div id="kids" style="background: #fff8f0; padding: 100px 0">
+        <div class="container">
+          <div style="text-align: center">
+            <div class="section-label">Safe for Kids</div>
+            <h2 class="section-title" data-aos="fade-up">
+              Made for Young Minds
+            </h2>
+            <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+              A 100% safe, ad-free environment for kids aged 6–17 to develop
+              cognitive superpowers through play.
+            </p>
+          </div>
+          <div class="kids-grid">
+            <div class="kids-card" data-aos="fade-up" data-aos-delay="0">
+              <span class="kids-emoji">🛡️</span>
+              <div class="kids-card-title">100% Safe Space</div>
+              <div class="kids-card-desc">
+                No ads, no inappropriate content, no strangers. Parental
+                controls and moderated environment.
+              </div>
+            </div>
+            <div class="kids-card" data-aos="fade-up" data-aos-delay="50">
+              <span class="kids-emoji">🧠</span>
+              <div class="kids-card-title">Brain Development</div>
+              <div class="kids-card-desc">
+                Scientifically-backed activities that develop critical thinking,
+                memory, and problem solving skills.
+              </div>
+            </div>
+            <div class="kids-card" data-aos="fade-up" data-aos-delay="100">
+              <span class="kids-emoji">🎮</span>
+              <div class="kids-card-title">Fun & Addictive</div>
+              <div class="kids-card-desc">
+                Kids stay engaged because it feels like gaming, not homework.
+                Average session: 38 minutes.
+              </div>
+            </div>
+            <div class="kids-card" data-aos="fade-up" data-aos-delay="150">
+              <span class="kids-emoji">📈</span>
+              <div class="kids-card-title">Track Progress</div>
+              <div class="kids-card-desc">
+                Parents can view detailed reports on their child's cognitive
+                growth and skill improvements.
+              </div>
+            </div>
+            <div class="kids-card" data-aos="fade-up" data-aos-delay="200">
+              <span class="kids-emoji">🌍</span>
+              <div class="kids-card-title">Global Kids League</div>
+              <div class="kids-card-desc">
+                Kids compete in age-matched brackets with players from 127
+                countries in weekly tournaments.
+              </div>
+            </div>
+            <div class="kids-card" data-aos="fade-up" data-aos-delay="250">
+              <span class="kids-emoji">🎓</span>
+              <div class="kids-card-title">School-Aligned</div>
+              <div class="kids-card-desc">
+                Math and logic games align with school curricula. Helps kids ace
+                tests and exams naturally.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. ABOUT LEARNIQ ============ -->
+    <section id="about">
+      <div class="container">
+        <div style="text-align: center">
+          <div class="section-label">About LearnIQ</div>
+          <h2 class="section-title" data-aos="fade-up">
+            Empowering Young Minds Worldwide
+          </h2>
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+            We're on a mission to make brain training fun, accessible, and
+            scientifically effective for students, teachers, and parents
+            everywhere.
+          </p>
+        </div>
+        <div
+          class="card-warm"
+          data-aos="fade-up"
+          style="
+            padding: 50px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+          "
+        >
+          <p
+            style="
+              font-size: 1.1rem;
+              color: var(--text-muted);
+              line-height: 1.8;
+              margin-bottom: 24px;
+            "
+          >
+            LearnIQ combines the power of
+            <strong style="color: var(--accent-coral)"
+              >gamified learning</strong
+            >
+            with a
+            <strong style="color: var(--accent-purple)"
+              >complete school management ecosystem</strong
+            >. Whether you're a student sharpening your logic skills, a teacher
+            tracking classroom progress, or a parent monitoring academic growth
+            — LearnIQ brings everything together on one intelligent platform.
+          </p>
+          <p
+            style="
+              font-size: 1.1rem;
+              color: var(--text-muted);
+              line-height: 1.8;
+              margin-bottom: 24px;
+            "
+          >
+            Trusted by
+            <strong style="color: var(--accent-coral)"
+              >2,000+ active players</strong
+            >
+            and rated
+            <strong style="color: var(--accent-amber)"
+              >★ 4.9 on Google Play</strong
+            >, our platform is built with love in India and designed for
+            schools, tuition centers, and independent learners across the globe.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 16px;
+              justify-content: center;
+              flex-wrap: wrap;
+              margin-top: 32px;
+            "
+          >
+            <div
+              style="
+                text-align: center;
+                padding: 20px 30px;
+                background: var(--accent-coral-light);
+                border-radius: 20px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: var(--accent-coral);
+                "
+              >
+                2K+
+              </div>
+              <div
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-muted);
+                  font-weight: 600;
+                "
+              >
+                Active Players
+              </div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 20px 30px;
+                background: var(--accent-purple-light);
+                border-radius: 20px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: var(--accent-purple);
+                "
+              >
+                50+
+              </div>
+              <div
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-muted);
+                  font-weight: 600;
+                "
+              >
+                Brain Games
+              </div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 20px 30px;
+                background: var(--accent-mint-light);
+                border-radius: 20px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: var(--accent-mint);
+                "
+              >
+                4.9★
+              </div>
+              <div
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-muted);
+                  font-weight: 600;
+                "
+              >
+                App Rating
+              </div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 20px 30px;
+                background: var(--accent-amber-light);
+                border-radius: 20px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-display);
+                  font-size: 2rem;
+                  font-weight: 700;
+                  color: #c78500;
+                "
+              >
+                98%
+              </div>
+              <div
+                style="
+                  font-size: 0.9rem;
+                  color: var(--text-muted);
+                  font-weight: 600;
+                "
+              >
+                Kids Love It
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. LEARNIQ GAMES SECTION ============ -->
+    <section id="games">
+      <div class="container">
+        <div style="text-align: center">
+          <div class="section-label">Game Library</div>
+          <h2 class="section-title" data-aos="fade-up">
+            Choose Your Challenge
+          </h2>
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+            6 brain-boosting games scientifically designed to develop different
+            cognitive skills while keeping you addicted.
+          </p>
+        </div>
+        <div class="games-grid">
+          <div class="game-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="game-icon-wrap">❌</div>
+            <div class="game-name">Tic Tac Toe</div>
+            <div class="game-desc">
+              Classic strategy game with AI opponent. Think 3 moves ahead and
+              dominate the board.
+            </div>
+            <div class="game-tag">⚡ Improves Logic</div>
+            <div class="game-footer">
+              <div class="game-players">
+                <div class="players-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                12.4K online
+              </div>
+              <a href="#demo-ttt" class="btn btn-primary btn-sm">Play</a>
+            </div>
+          </div>
+          <div class="game-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="game-icon-wrap">🔢</div>
+            <div class="game-name">Number Logic</div>
+            <div class="game-desc">
+              Fill grids with numbers using pure deductive reasoning. Advanced
+              Sudoku-style challenges.
+            </div>
+            <div class="game-tag">🧩 Problem Solving</div>
+            <div class="game-footer">
+              <div class="game-players">
+                <div class="players-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                8.7K online
+              </div>
+              <a href="#demo-numberlogic" class="btn btn-secondary btn-sm"
+                >Play</a
+              >
+            </div>
+          </div>
+          <div class="game-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="game-icon-wrap">➕</div>
+            <div class="game-name">Math Quiz</div>
+            <div class="game-desc">
+              Speed-solve equations before the timer hits zero. Unlock harder
+              levels as your score climbs.
+            </div>
+            <div class="game-tag">🚀 Math Speed</div>
+            <div class="game-footer">
+              <div class="game-players">
+                <div class="players-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                21.1K online
+              </div>
+              <a href="#demo-mathquiz" class="btn btn-primary btn-sm">Play</a>
+            </div>
+          </div>
+          <div class="game-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="game-icon-wrap">🎴</div>
+            <div class="game-name">Memory Challenge</div>
+            <div class="game-desc">
+              Flip and match cards in record time. Tests short-term recall and
+              improves working memory.
+            </div>
+            <div class="game-tag">🧠 Memory Power</div>
+            <div class="game-footer">
+              <div class="game-players">
+                <div class="players-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                9.3K online
+              </div>
+              <a href="#demo-memory" class="btn btn-secondary btn-sm">Play</a>
+            </div>
+          </div>
+          <div class="game-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="game-icon-wrap">⚡</div>
+            <div class="game-name">Reflex Training</div>
+            <div class="game-desc">
+              React to visual stimuli in milliseconds. Track your reaction time
+              improvements over time.
+            </div>
+            <div class="game-tag">⚡ Reflexes</div>
+            <div class="game-footer">
+              <div class="game-players">
+                <div class="players-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                15.6K online
+              </div>
+              <a href="#demo-reflex" class="btn btn-red btn-sm">Play</a>
+            </div>
+          </div>
+          <div class="game-card" data-aos="fade-up" data-aos-delay="250">
+            <div class="game-icon-wrap">🔮</div>
+            <div class="game-name">Pattern Recon</div>
+            <div class="game-desc">
+              Identify hidden sequences, visual patterns, and predict what comes
+              next. Pure IQ boost.
+            </div>
+            <div class="game-tag">🎯 IQ Development</div>
+            <div class="game-footer">
+              <div class="game-players">
+                <div class="players-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                6.8K online
+              </div>
+              <a href="#demo-patternrecon" class="btn btn-primary btn-sm"
+                >Play</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section (part of Games) -->
     <section id="demo">
       <div class="container">
         <div style="text-align: center">
           <div class="section-label">Try It Now</div>
-          <h2 class="section-title">Play Right Here</h2>
-          <p class="section-sub">
+          <h2 class="section-title" data-aos="fade-up">Play Right Here</h2>
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
             No signup required. Test your brain with all six brain games below.
           </p>
         </div>
@@ -1293,219 +1811,13 @@
       </div>
     </section>
 
-    <!-- Showcase Section -->
-    <section id="showcase">
-      <div class="container" style="text-align: center; margin-bottom: 50px">
-        <div class="section-label">App Screens</div>
-        <h2 class="section-title">Your Command Center</h2>
-        <p class="section-sub reveal">
-          Explore the real LearnIQ interface – gaming meets learning.
-        </p>
-      </div>
-      <div style="overflow: hidden">
-        <div class="showcase-track" id="showcaseTrack"></div>
-      </div>
-    </section>
-
-    <!-- Gamification Section -->
-    <section id="gamification">
-      <div class="container">
-        <div style="text-align: center">
-          <div class="section-label">Gamification</div>
-          <h2 class="section-title">Stay Hooked. Stay Sharp.</h2>
-          <p class="section-sub">
-            A full reward ecosystem designed to keep you coming back every
-            single day.
-          </p>
-        </div>
-        <div class="gamif-grid">
-          <div class="gamif-card reveal">
-            <span class="gamif-icon">🔥</span>
-            <div class="gamif-title">Daily Streaks</div>
-            <div class="gamif-desc">
-              Build an unbreakable habit. Earn bonus XP and exclusive badges for
-              every milestone.
-            </div>
-            <div class="streak-days">
-              <div class="streak-day lit">1</div>
-              <div class="streak-day lit">2</div>
-              <div class="streak-day lit">3</div>
-              <div class="streak-day lit">4</div>
-              <div class="streak-day lit">5</div>
-              <div class="streak-day lit">6</div>
-              <div class="streak-day lit">7</div>
-              <div class="streak-day dim">8</div>
-              <div class="streak-day dim">9</div>
-              <div class="streak-day dim">10</div>
-            </div>
-          </div>
-          <div class="gamif-card reveal" style="transition-delay: 0.1s">
-            <span class="gamif-icon">⚡</span>
-            <div class="gamif-title">XP Progression</div>
-            <div class="gamif-desc">
-              Earn XP with every game, unlock new levels, and watch your rank
-              climb the global charts.
-            </div>
-            <div class="xp-row">
-              <span class="xp-label">Level 24 → 25</span
-              ><span class="xp-val">2,480 / 3,000 XP</span>
-            </div>
-            <div class="xp-bar-track"><div class="xp-bar-fill"></div></div>
-          </div>
-          <div class="gamif-card reveal" style="transition-delay: 0.2s">
-            <span class="gamif-icon">🏅</span>
-            <div class="gamif-title">Rank Badges</div>
-            <div class="gamif-desc">
-              Prove your mastery. Collect rare badges that showcase your brain
-              skills to the world.
-            </div>
-            <div class="rank-badges">
-              <div class="rank-badge rank-gold">🥇 IQ Master</div>
-              <div class="rank-badge rank-silver">🥈 Speed Pro</div>
-              <div class="rank-badge rank-bronze">🥉 Logic Star</div>
-            </div>
-          </div>
-          <div class="gamif-card reveal" style="transition-delay: 0.3s">
-            <span class="gamif-icon">🎯</span>
-            <div class="gamif-title">Weekly Challenges</div>
-            <div class="gamif-desc">
-              Special limited-time events with massive rewards. Compete globally
-              every week.
-            </div>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap">
-              <span
-                style="
-                  padding: 6px 12px;
-                  background: var(--accent-coral-light);
-                  border-radius: 8px;
-                  font-size: 11px;
-                  color: var(--accent-coral);
-                  font-weight: 700;
-                "
-                >🧩 Puzzle Week</span
-              ><span
-                style="
-                  padding: 6px 12px;
-                  background: var(--accent-purple-light);
-                  border-radius: 8px;
-                  font-size: 11px;
-                  color: var(--accent-purple);
-                  font-weight: 700;
-                "
-                >⏱ Speed Trial</span
-              >
-            </div>
-          </div>
-          <div class="gamif-card reveal" style="transition-delay: 0.4s">
-            <span class="gamif-icon">🧠</span>
-            <div class="gamif-title">Brain Score</div>
-            <div class="gamif-desc">
-              Your overall cognitive rating updated in real-time based on
-              performance across all games.
-            </div>
-            <div class="brain-score-wrap">
-              <span
-                class="brain-score-num counter"
-                data-target="142"
-                data-suffix=""
-                >0</span
-              ><span class="brain-score-label">IQ Brain Score</span>
-            </div>
-          </div>
-          <div class="gamif-card reveal" style="transition-delay: 0.5s">
-            <span class="gamif-icon">🪙</span>
-            <div class="gamif-title">Reward System</div>
-            <div class="gamif-desc">
-              Earn coins from every win. Spend on custom themes, power-ups,
-              hints, and exclusive game skins.
-            </div>
-            <div
-              style="
-                font-family:
-                  &quot;Fredoka&quot;, &quot;Nunito&quot;, sans-serif;
-                font-size: 1.5rem;
-                font-weight: 700;
-                color: #c78500;
-              "
-            >
-              🪙 4,250 Coins
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Kids Section -->
-    <section id="kids">
-      <div class="container">
-        <div style="text-align: center">
-          <div class="section-label">Safe for Kids</div>
-          <h2 class="section-title">Made for Young Minds</h2>
-          <p class="section-sub">
-            A 100% safe, ad-free environment for kids aged 6–17 to develop
-            cognitive superpowers through play.
-          </p>
-        </div>
-        <div class="kids-grid">
-          <div class="kids-card reveal">
-            <span class="kids-emoji">🛡️</span>
-            <div class="kids-card-title">100% Safe Space</div>
-            <div class="kids-card-desc">
-              No ads, no inappropriate content, no strangers. Parental controls
-              and moderated environment.
-            </div>
-          </div>
-          <div class="kids-card reveal" style="transition-delay: 0.1s">
-            <span class="kids-emoji">🧠</span>
-            <div class="kids-card-title">Brain Development</div>
-            <div class="kids-card-desc">
-              Scientifically-backed activities that develop critical thinking,
-              memory, and problem solving skills.
-            </div>
-          </div>
-          <div class="kids-card reveal" style="transition-delay: 0.2s">
-            <span class="kids-emoji">🎮</span>
-            <div class="kids-card-title">Fun & Addictive</div>
-            <div class="kids-card-desc">
-              Kids stay engaged because it feels like gaming, not homework.
-              Average session: 38 minutes.
-            </div>
-          </div>
-          <div class="kids-card reveal" style="transition-delay: 0.3s">
-            <span class="kids-emoji">📈</span>
-            <div class="kids-card-title">Track Progress</div>
-            <div class="kids-card-desc">
-              Parents can view detailed reports on their child's cognitive
-              growth and skill improvements.
-            </div>
-          </div>
-          <div class="kids-card reveal" style="transition-delay: 0.4s">
-            <span class="kids-emoji">🌍</span>
-            <div class="kids-card-title">Global Kids League</div>
-            <div class="kids-card-desc">
-              Kids compete in age-matched brackets with players from 127
-              countries in weekly tournaments.
-            </div>
-          </div>
-          <div class="kids-card reveal" style="transition-delay: 0.5s">
-            <span class="kids-emoji">🎓</span>
-            <div class="kids-card-title">School-Aligned</div>
-            <div class="kids-card-desc">
-              Math and logic games align with school curricula. Helps kids ace
-              tests and exams naturally.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Leaderboard Section -->
     <section id="leaderboard">
       <div class="container">
         <div style="text-align: center">
           <div class="section-label">Global Rankings</div>
-          <h2 class="section-title">Hall of Legends</h2>
-          <p class="section-sub">
+          <h2 class="section-title" data-aos="fade-up">Hall of Legends</h2>
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
             Top IQ warriors from around the world. Do you have what it takes to
             reach #1?
           </p>
@@ -1628,18 +1940,18 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- ============ 8. TESTIMONIALS ============ -->
     <section id="testimonials">
       <div class="container">
         <div style="text-align: center">
           <div class="section-label">Reviews</div>
-          <h2 class="section-title">Players Love It</h2>
-          <p class="section-sub">
+          <h2 class="section-title" data-aos="fade-up">Players Love It</h2>
+          <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
             Over 2 thousand+ brains trained. Here's what they say.
           </p>
         </div>
         <div class="testi-grid">
-          <div class="testi-card reveal">
+          <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
             <div class="testi-quote">"</div>
             <div class="testi-text">
               My son went from struggling with math to absolutely loving it. His
@@ -1655,7 +1967,7 @@
               </div>
             </div>
           </div>
-          <div class="testi-card reveal" style="transition-delay: 0.15s">
+          <div class="testi-card" data-aos="fade-up" data-aos-delay="50">
             <div class="testi-quote">"</div>
             <div class="testi-text">
               I've tried every brain training app out there. LearnIQ is the only
@@ -1671,7 +1983,7 @@
               </div>
             </div>
           </div>
-          <div class="testi-card reveal" style="transition-delay: 0.3s">
+          <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
             <div class="testi-quote">"</div>
             <div class="testi-text">
               The reflex training game is insanely addictive. I've been on a
@@ -1687,7 +1999,7 @@
               </div>
             </div>
           </div>
-          <div class="testi-card reveal" style="transition-delay: 0.1s">
+          <div class="testi-card" data-aos="fade-up" data-aos-delay="150">
             <div class="testi-quote">"</div>
             <div class="testi-text">
               As a teacher, I recommend LearnIQ to all my students. The logic
@@ -1705,7 +2017,7 @@
               </div>
             </div>
           </div>
-          <div class="testi-card reveal" style="transition-delay: 0.25s">
+          <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
             <div class="testi-quote">"</div>
             <div class="testi-text">
               I'm 52 and was worried my mental sharpness was declining. After 60
@@ -1723,7 +2035,7 @@
               </div>
             </div>
           </div>
-          <div class="testi-card reveal" style="transition-delay: 0.4s">
+          <div class="testi-card" data-aos="fade-up" data-aos-delay="250">
             <div class="testi-quote">"</div>
             <div class="testi-text">
               The leaderboard system keeps me coming back every day. Being in
@@ -1740,103 +2052,6 @@
                 <div class="testi-stars">★★★★★</div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT SECTION ============ -->
-    <section id="contact">
-      <div class="container">
-        <div style="text-align: center">
-          <div class="section-label">Get in Touch</div>
-          <h2 class="section-title">We'd Love to Hear From You</h2>
-          <p class="section-sub">
-            Whether you're a parent, school administrator, or a curious student
-            — drop us a message and we'll get back to you promptly.
-          </p>
-        </div>
-        <div class="contact-wrapper reveal">
-          <div class="contact-info">
-            <h3>Contact LearnIQ</h3>
-            <p>
-              Reach out for partnerships, school onboarding, support, or any
-              other inquiries.
-            </p>
-            <div class="contact-details">
-              <div class="contact-detail">
-                <div class="icon">📧</div>
-                <span>learniqtech@gmail.com</span>
-              </div>
-              <div class="contact-detail">
-                <div class="icon">📱</div>
-                <span>+91 72065 10271</span>
-              </div>
-              <div class="contact-detail">
-                <div class="icon">📍</div>
-                <span>Chandigarh, India</span>
-              </div>
-            </div>
-          </div>
-          <div class="contact-form">
-            <form id="contactForm" onsubmit="handleContactSubmit(event)">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Your Name *</label
-                  ><input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address *</label
-                  ><input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="role">I am a...</label
-                ><select id="role" name="role">
-                  <option value="parent">Parent</option>
-                  <option value="school">School Administrator</option>
-                  <option value="student">Student</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label
-                ><input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="How can we help?"
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message *</label
-                ><textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  placeholder="Tell us more..."
-                ></textarea>
-              </div>
-              <div class="form-submit">
-                <button type="submit" class="btn btn-primary" id="submitBtn">
-                  <span>✉️</span> Send Message
-                </button>
-                <div id="formStatus" class="form-message"></div>
-              </div>
-            </form>
           </div>
         </div>
       </div>
@@ -1903,8 +2118,8 @@
                 flex-wrap: wrap;
               "
             >
-              <a href="#" class="btn btn-primary">🚀 Start For Free</a>
-              <a
+              <a href="#" class="btn btn-primary">🚀 Start For Free</a
+              ><a
                 href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
                 target="_blank"
                 class="btn btn-ghost"
@@ -1928,119 +2143,63 @@
               designed games.
             </p>
             <div class="footer-social">
-              <a href="#" class="social-btn">𝕏</a>
+              <a href="#" class="social-btn">
+                <img
+                  src="images/twitter.svg"
+                  alt="Twitter"
+                  width="24"
+                  height="24"
+              /></a>
               <a
                 href="https://play.google.com/store/apps/details?id=com.rvn.learniq"
                 target="_blank"
                 class="social-btn"
-                >📱</a
               >
+                <img
+                  src="images/app link.svg"
+                  alt="app link"
+                  width="35"
+                  height="35"
+              /></a>
               <a
                 href="https://www.instagram.com/learn_iqofficial"
                 target="_blank"
                 class="social-btn"
-              >
-                <svg
-                  id="Instagram--Streamline-Openmoji"
-                  viewBox="0 0 32 32"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="32"
-                  width="32"
-                >
-                  <desc>
-                    Instagram Streamline Emoji: https://streamlinehq.com
-                  </desc>
-                  <g id="color">
-                    <path
-                      fill="#ffffff"
-                      d="M22.934266666666666 0.9629777777777777H9.065777777777777c-4.475022222222222 0 -8.1028 3.6277777777777773 -8.1028 8.1028v13.868444444444444c0 4.475022222222222 3.6277777777777773 8.1028 8.1028 8.1028h13.868444444444444c4.475022222222222 0 8.1028 -3.6277777777777773 8.1028 -8.1028V9.065777777777777c0.00004444444444444445 -4.475022222222222 -3.627733333333333 -8.1028 -8.102755555555555 -8.1028Z"
-                      stroke-width="0.4444"
-                    ></path>
-                  </g>
-                  <g id="hair"></g>
-                  <g id="skin"></g>
-                  <g id="skin-shadow"></g>
-                  <g id="line">
-                    <path
-                      fill="none"
-                      stroke="#000000"
-                      stroke-miterlimit="10"
-                      stroke-width="0.8889"
-                      d="M22.934266666666666 0.9629777777777777H9.065777777777777c-4.475022222222222 0 -8.1028 3.6277777777777773 -8.1028 8.1028v13.868444444444444c0 4.475022222222222 3.6277777777777773 8.1028 8.1028 8.1028h13.868444444444444c4.475022222222222 0 8.1028 -3.6277777777777773 8.1028 -8.1028V9.065777777777777c0.00004444444444444445 -4.475022222222222 -3.627733333333333 -8.1028 -8.102755555555555 -8.1028Z"
-                    ></path>
-                    <path
-                      fill="none"
-                      stroke="#000000"
-                      stroke-miterlimit="10"
-                      stroke-width="0.8889"
-                      d="M8.740755555555555 16.000044444444445c-0.004355555555555555 5.588177777777777 6.042311111111111 9.08551111111111 10.884 6.2951999999999995 2.2505333333333333 -1.2969777777777778 3.6365777777777772 -3.697688888888889 3.634533333333333 -6.2951999999999995 0.0044 -5.588222222222222 -6.0422666666666665 -9.085555555555555 -10.883955555555556 -6.295244444444444 -2.2505777777777776 1.297022222222222 -3.636622222222222 3.697688888888889 -3.6345777777777775 6.295244444444444"
-                    ></path>
-                    <path
-                      d="M23.259244444444445 7.185244444444443c0 1.1974666666666667 1.296311111111111 1.9459111111111111 2.333333333333333 1.3471555555555554 0.4813333333333333 -0.27786666666666665 0.7778222222222222 -0.7913777777777777 0.7778222222222222 -1.3471555555555554 0 -1.1974666666666667 -1.296311111111111 -1.9459111111111111 -2.3333777777777773 -1.3471555555555554 -0.4812888888888889 0.27786666666666665 -0.7777777777777777 0.7914222222222221 -0.7777777777777777 1.3471555555555554"
-                      stroke-width="0.4444"
-                    ></path>
-                  </g>
-                </svg>
-              </a>
+                ><img
+                  src="images/insta.svg"
+                  alt="Instagram"
+                  width="24"
+                  height="24"
+              /></a>
               <a
                 href="https://www.youtube.com/@learniqofficial/"
                 target="_blank"
                 class="social-btn"
-              >
-                <svg
-                  id="Youtube--Streamline-Openmoji"
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="32"
-                  width="32"
-                >
-                  <g id="color">
-                    <path
-                      fill="#ea5a47"
-                      stroke="none"
-                      d="M30.525333333333332 8.655333333333333c-0.3486666666666666 -1.3129333333333333 -1.3758666666666666 -2.3468444444444443 -2.6803999999999997 -2.697733333333333C25.480666666666664 5.319866666666666 16 5.319866666666666 16 5.319866666666666s-9.480622222222221 0 -11.844977777777776 0.6377333333333334c-1.3043999999999998 0.35088888888888886 -2.3317777777777775 1.3848 -2.6803999999999997 2.697733333333333C0.8411111111111111 11.034977777777778 0.8411111111111111 16 0.8411111111111111 16s0 4.964933333333333 0.633511111111111 7.344799999999999c0.3486222222222222 1.3128 1.376 2.346711111111111 2.6803999999999997 2.6977777777777776C6.519377777777777 26.68013333333333 16 26.68013333333333 16 26.68013333333333s9.480666666666666 0 11.844933333333332 -0.6375555555555555c1.3045333333333333 -0.3510666666666667 2.331733333333333 -1.3849333333333331 2.6803999999999997 -2.6977777777777776C31.15888888888889 20.964933333333335 31.15888888888889 16 31.15888888888889 16s0 -4.9649777777777775 -0.6335555555555555 -7.344666666666667"
-                      stroke-width="0.4444"
-                    ></path>
-                    <path
-                      fill="#ffffff"
-                      stroke="none"
-                      d="m12.899333333333331 20.50782222222222 7.923955555555556 -4.507599999999999 -7.923955555555556 -4.508044444444445Z"
-                      stroke-width="0.4444"
-                    ></path>
-                  </g>
-                  <g id="hair"></g>
-                  <g id="skin"></g>
-                  <g id="skin-shadow"></g>
-                  <g id="line">
-                    <path
-                      fill="none"
-                      stroke="#000000"
-                      stroke-miterlimit="10"
-                      stroke-width="0.8889"
-                      d="M30.525333333333332 8.655333333333333c-0.3486666666666666 -1.3129333333333333 -1.3758666666666666 -2.3468444444444443 -2.6803999999999997 -2.697733333333333C25.480666666666664 5.319866666666666 16 5.319866666666666 16 5.319866666666666s-9.480622222222221 0 -11.844977777777776 0.6377333333333334c-1.3043999999999998 0.35088888888888886 -2.3317777777777775 1.3848 -2.6803999999999997 2.697733333333333C0.8411111111111111 11.034977777777778 0.8411111111111111 16 0.8411111111111111 16s0 4.964933333333333 0.633511111111111 7.344799999999999c0.3486222222222222 1.3128 1.376 2.346711111111111 2.6803999999999997 2.6977777777777776C6.519377777777777 26.68013333333333 16 26.68013333333333 16 26.68013333333333s9.480666666666666 0 11.844933333333332 -0.6375555555555555c1.3045333333333333 -0.3510666666666667 2.331733333333333 -1.3849333333333331 2.6803999999999997 -2.6977777777777776C31.15888888888889 20.964933333333335 31.15888888888889 16 31.15888888888889 16s0 -4.9649777777777775 -0.6335555555555555 -7.344666666666667"
-                    ></path>
-                    <path
-                      fill="none"
-                      stroke="#000000"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="0.8889"
-                      d="m12.899333333333331 20.50782222222222 7.923955555555556 -4.507599999999999 -7.923955555555556 -4.508044444444445Z"
-                    ></path>
-                  </g>
-                </svg>
-              </a>
-              <a href="#contact" class="social-btn">💬</a>
+                ><svg viewBox="0 0 32 32" height="32" width="32">
+                  <path
+                    fill="#ea5a47"
+                    d="M30.525 8.655c-.349-1.313-1.376-2.347-2.68-2.698C25.48 5.32 16 5.32 16 5.32S6.52 5.32 4.155 5.957c-1.304.351-2.332 1.385-2.68 2.698C.84 11.035.84 16 .84 16s0 4.965.634 7.345c.348 1.313 1.376 2.347 2.68 2.698C6.52 26.68 16 26.68 16 26.68s9.48 0 11.845-.637c1.304-.351 2.331-1.385 2.68-2.698C31.159 20.965 31.159 16 31.159 16s0-4.965-.634-7.345"
+                  />
+                  <path
+                    fill="#fff"
+                    d="m12.9 20.508 7.924-4.508-7.924-4.508Z"
+                  /></svg
+              ></a>
+              <a href="#hero" class="social-btn">
+                <img
+                  src="images/message.svg"
+                  alt="message"
+                  width="24"
+                  height="24"
+              /></a>
             </div>
           </div>
           <div>
             <div class="footer-col-title">Platform</div>
             <ul class="footer-links">
               <li><a href="#hero">Home</a></li>
+              <li><a href="#services">Services</a></li>
               <li><a href="#games">Games</a></li>
-              <li><a href="#leaderboard">Leaderboard</a></li>
               <li><a href="#demo">Play Demo</a></li>
               <li><a href="#showcase">App Screens</a></li>
             </ul>
@@ -2048,8 +2207,8 @@
           <div>
             <div class="footer-col-title">Company</div>
             <ul class="footer-links">
-              <li><a href="#contact">About Us</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#hero">Contact</a></li>
             </ul>
           </div>
           <div>
@@ -2099,22 +2258,23 @@
         <div class="footer-bottom">
           <div>© 2026 LearnIQ. All rights reserved.</div>
           <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
+            <a href="#">Privacy Policy</a><a href="#">Terms of Service</a
+            ><a href="#">Cookie Policy</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button
       id="scrollTop"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
     >
       ↑
     </button>
-
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
   </body>
 </html>
